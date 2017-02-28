@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/web/WEB-INF/lib" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.5-bin/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/yahoo_search-2.0.1.jar/yahoo_search-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.3.2-bin/commons-fileupload-1.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/web/WEB-INF/lib" recursive="false" />
+  </library>
+</component>
