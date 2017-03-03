@@ -74,4 +74,18 @@
         <env-entry-type>java.lang.String</env-entry-type>
         <env-entry-value>Redweb, Cobain, Roses, Axl, </env-entry-value>
     </env-entry>
+    <servlet>
+        <servlet-name>LifeCycle</servlet-name>
+        <servlet-class>com.redweb.servlet.LifeCycle</servlet-class>
+
+        <init-param>
+            <param-name>startPoint</param-name>
+            <param-value>1600</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LifeCycle</servlet-name>
+        <url-pattern>/LifeCycle</url-pattern>
+    </servlet-mapping>
 </web-app>
