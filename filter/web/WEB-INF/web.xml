@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <filter>
+        <filter-name>imageRedirectFilter</filter-name>
+        <filter-class>com.redweb.filter.ImageRedirectFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>imageRedirectFilter</filter-name>
+        <url-pattern>/images/*</url-pattern>
+        <url-pattern>/upload/images/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>com.redweb.filter.CharacterEncodingFilter</filter-class>
+
+        <init-param>
+            <param-name>characterEncoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>enabled</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LogFilter</filter-name>
+        <filter-class>com.redweb.filter.LogFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LogFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>ExceptionHandleFilter</filter-name>
+        <filter-class>com.redweb.filter.ExceptionHandleFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ExceptionHandleFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>privilegeFilter</filter-name>
+        <filter-class>com.redweb.filter.PriviledgeFilter</filter-class>
+
+        <init-param>
+            <param-name>file</param-name>
+            <param-value>/WEB-INF/privilege.properties</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>privilegeFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>OutputReplaceFilter</filter-name>
+        <filter-class>com.redweb.filter.OutputReplaceFilter</filter-class>
+
+        <init-param>
+            <param-name>file</param-name>
+            <param-value>/WEB-INF/sensitive.properties</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>OutputReplaceFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
