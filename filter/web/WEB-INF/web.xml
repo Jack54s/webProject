@@ -120,4 +120,22 @@
         <url-pattern>*.html</url-pattern>
         <url-pattern>*.do</url-pattern>
     </filter-mapping>
+
+    <filter>
+        <filter-name>xsltFilter</filter-name>
+        <filter-class>com.redweb.filter.XSLTFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>xsltFilter</filter-name>
+        <url-pattern>/msn/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>uploadFilter</filter-name>
+        <filter-class>com.redweb.filter.UploadFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>uploadFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
