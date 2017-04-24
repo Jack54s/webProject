@@ -15,4 +15,13 @@
     <listener>
         <listener-class>com.redweb.singleton.LoginSessionListener</listener-class>
     </listener>
+    <listener>
+        <listener-class>com.redweb.listener.MyContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.redweb.listener.MyRequestListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.redweb.listener.MySessionListener</listener-class>
+    </listener>
 </web-app>
