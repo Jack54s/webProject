@@ -18,4 +18,87 @@
         <tag-class>com.redweb.tags.Copyright2</tag-class>
         <body-content>JSP</body-content>
     </tag>
+
+    <tag>
+        <name>hello</name>
+        <tag-class>com.redweb.tags.HelloTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>add</name>
+        <tag-class>com.redweb.tags.AddTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>num1</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>num2</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>toLowerCase</name>
+        <tag-class>com.redweb.tags.ToLowerCaseTag</tag-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+    <tag>
+        <name>loop</name>
+        <tag-class>com.redweb.tags.LoopTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>times</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>dynamicAttribute</name>
+        <tag-class>com.redweb.tags.DynamicAttributeTag</tag-class>
+        <body-content>empty</body-content>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <name>table</name>
+        <tag-class>com.redweb.tags.Table</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>items</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>url</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>column</name>
+        <tag-class>com.redweb.tags.Column</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>property</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>label</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
 </taglib>
